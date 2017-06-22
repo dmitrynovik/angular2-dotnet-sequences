@@ -6,6 +6,6 @@ namespace NumericSequences.UnitTest
     public class EvenNaturalsTest
     {
         [Test]
-        public void When_Limit_5_Returns_2_4() => new EvenPositiveNaturalNumbers(5).SequenceEqual(new[] {2, 4});
+        public void When_Limit_5_Returns_2_4() => new EvenPositiveNaturalNumbers(5).AssertEquals(new[] {2, 4});
     }
 }

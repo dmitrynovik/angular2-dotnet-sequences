@@ -7,6 +7,6 @@ namespace NumericSequences.UnitTest
     {
         [Test]
         public void When_Limit_13_Returns_Expected_Result() =>
-            new FibonacciNumbers(13).SequenceEqual(new[] { 1, 1, 2, 3, 5, 8, 13 });
+            new FibonacciNumbers(13).AssertEquals(new[] { 1, 1, 2, 3, 5, 8, 13 });
     }
 }

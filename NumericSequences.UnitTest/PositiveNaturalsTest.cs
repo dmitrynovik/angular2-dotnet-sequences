@@ -19,6 +19,6 @@ namespace NumericSequences.UnitTest
         }
 
         [Test]
-        public void When_Limit_5_Returns_1_To_5() => new PositiveNaturalNumbers(5).SequenceEqual(new[] {1, 2, 3, 4, 5});
+        public void When_Limit_5_Returns_1_To_5() => new PositiveNaturalNumbers(5).AssertEquals(new[] {1, 2, 3, 4, 5});
     }
 }
