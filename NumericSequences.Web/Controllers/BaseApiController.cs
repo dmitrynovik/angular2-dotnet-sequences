@@ -6,7 +6,7 @@ using System.Web.Http;
 
 namespace NumericSequences.Web.Controllers
 {
-    public class BaseApiController : ApiController
+    public abstract class BaseApiController : ApiController
     {
         protected HttpResponseMessage Json(dynamic obj)
         {
