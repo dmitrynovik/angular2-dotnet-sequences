@@ -8,7 +8,7 @@ namespace NumericSequences
         {
             var type = Type.GetType($"NumericSequences.{name}");
             if (type == null)
-                throw new ArgumentException("Sequence does not exist", nameof(name));
+                throw new ArgumentException($"Sequence '{name}' does not exist", nameof(name));
 
             return (ISequence<T>) Activator.CreateInstance(type, new object[] { limit });
         }
