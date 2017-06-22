@@ -8,7 +8,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
+        this._model = 10;
     }
+    Object.defineProperty(AppComponent.prototype, "model", {
+        get: function () {
+            return this._model;
+        },
+        set: function (value) {
+            this._model = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
     return AppComponent;
 }());
 AppComponent = __decorate([

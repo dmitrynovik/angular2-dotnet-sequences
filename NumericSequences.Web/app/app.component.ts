@@ -7,5 +7,13 @@ import { FormsModule } from '@angular/forms';
 })
 
 export class AppComponent {
- 
+    private _model: number = 10;
+
+    get model(): number {
+        return this._model;
+    }
+
+    set model(value: number) {
+        this._model = value;
+    }
 }
