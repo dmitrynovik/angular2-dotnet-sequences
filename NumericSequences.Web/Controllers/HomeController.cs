@@ -6,8 +6,7 @@ namespace NumericSequences.Web.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
-
+            ViewBag.Title = "Numeric Sequences App";
             return View();
         }
     }
