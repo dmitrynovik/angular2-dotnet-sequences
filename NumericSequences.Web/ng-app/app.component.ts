@@ -2,9 +2,8 @@
 
 @Component({
      selector:"user-app",
-     templateUrl: "./app/app.component.html" 
+     templateUrl: "./ng-app/app.component.html" 
 })
 
 export class AppComponent {
- 
 }
