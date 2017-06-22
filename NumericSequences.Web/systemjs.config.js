@@ -3,7 +3,7 @@
         map: {
             'rxjs': 'node_modules/rxjs',
             '@angular': 'node_modules/@angular',
-            'app': './ng-app',
+            'app': './app',
             'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api'
         },
         packages: {
