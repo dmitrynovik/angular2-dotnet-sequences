@@ -2,7 +2,8 @@
 
 ## HOWTO Build and Run
 
-This is the .NET Web API  and Angular2 application built with Visual Studio 2017.
+This is the **.NET Web API**  and **Angular2** application built with Visual Studio 2017.
+The Angular2 app resides in NumericSequences.Web/app folder.
 
 ### Prerequisites
 
