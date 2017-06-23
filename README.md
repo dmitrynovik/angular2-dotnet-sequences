@@ -5,7 +5,10 @@ Goal As a USER
 I want to calculate some numeric sequences
 so that [TBD].
 
-Acceptance Criteria 1. The software shall be web­based.
+Acceptance Criteria 
+
+1. The software shall be web­based.
+
 2. Unit tests shall be written for each functional component of the
 software.
 
@@ -25,15 +28,13 @@ Acceptance Criteria S1.1 The instructions shall be short and to the point.
 
 S2 Enter Data
 
-Story ID S2 Enter Data
-
-Story As a USER
-
 I want to enter a number and initiate the calculation of the numeric sequences so that I can view the results.
 
 Acceptance Criteria S2.1 Input shall accept positive, whole numbers only.
 
 S2.2 Where an input is invalid an error message shall be displayed.
+
+S3 Acceptance Criteria 
 
 I want to view the results of the numeric sequences so that [TBD].
 
