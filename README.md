@@ -15,11 +15,16 @@ Node.js
 0. git clone https://github.com/dmitrynovik/angular2-dotnet-sequences.git
 
 1. cd angular-dotnet-sequences/NumericSequences.Web
+
 1.1 npm install
+
 1.2 npm run
 
+
 2. Open solution in Visual Studio 2017
+
 2.1 Set startup project to NumericSequences.Web
+
 2.2 build and run
 
 ## Numeric Sequence Calculator
