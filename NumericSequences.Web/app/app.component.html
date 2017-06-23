@@ -14,7 +14,7 @@
                    required placeholder="Please enter a positive integer." positiveInteger/>
 
             <div [hidden]="limit.valid || limit.pristine" class="alert alert-danger" style="max-width: 280px">
-                <p>Please enter a positive integer.</p>
+                <p>Please enter a positive integer between 1 and 1000</p>
             </div>
         </div>
         <br />
@@ -22,4 +22,13 @@
             <input type="submit" class="btn btn-primary" (click)="onSubmit()" />
         </div>
     </form>
+    <div *ngFor="let seq of sequences" class="sequence">
+        <div class="row">
+            <div class="col-xs-12 strong">{{seq.Name}}</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">{{seq.Values}}</div>
+        </div>
+        <br />
+    </div>
 </div>

@@ -3,6 +3,7 @@ import { AbstractControl, NgModel } from '@angular/forms';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
 
 @Component({
     selector:"user-app",
@@ -14,6 +15,7 @@ export class AppComponent implements AfterViewChecked {
     constructor(private http: Http) {  }
 
     private model = 10;
+    private sequences:any = [];
     @ViewChild('limit') limit: NgModel;
 
     static positiveIntValidator = (control: AbstractControl): { [key: string]: any } => {
@@ -22,6 +24,9 @@ export class AppComponent implements AfterViewChecked {
         }
         else if (!Number.isInteger(control.value)) {
             return { nonInteger: true };
+        }
+        else if (control.value > 1000) {
+            return { tooLarge: true };
         }
         else {
             return null;
@@ -37,10 +42,14 @@ export class AppComponent implements AfterViewChecked {
     }
 
     onSubmit() {
-        const rx = this.http.get("http://localhost:24461/api/sequence/getall?limit=" + this.model)
-            .map((response: Response) => response.json());
 
-        const data = rx.subscribe();
-        console.log(data);
+        const url = "http://localhost:24461/api/sequence/getall?limit=" + this.model;
+
+        this.http.get(url)
+            .map((response: Response) => response.json())
+            .subscribe(
+                data => this.sequences = data,
+                err => console.log(err)
+            );
     }
 }

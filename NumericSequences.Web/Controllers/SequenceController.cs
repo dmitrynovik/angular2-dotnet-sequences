@@ -5,7 +5,7 @@ namespace NumericSequences.Web.Controllers
 {
     public class SequenceController : BaseApiController
     {
-        static readonly SequenceFactory Factory = new SequenceFactory(); 
+        private static readonly SequenceFactory Factory = new SequenceFactory(); 
 
         /// <summary>Creates and enumerates a sequence</summary>
         /// <param name="name">Sequence name</param>
@@ -13,13 +13,13 @@ namespace NumericSequences.Web.Controllers
         public HttpResponseMessage Get(string name, int limit)
         {
             var sequence = Factory.Create<int>(name, limit);
-            return Json(sequence.Print());
+            return Json(new { sequence.Name, Values = sequence.Print()});
         }
 
         public HttpResponseMessage GetAll(int limit)
         {
             var sequences = Factory.CreateAll(limit);               
-            return Json(sequences.Select(x => x.Print()));
+            return Json(sequences.Select(x => new { x.Name, Values = x.Print() }));
         }
     }
 }

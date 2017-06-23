@@ -12,10 +12,12 @@ var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/http");
 require("rxjs/add/operator/map");
+require("rxjs/add/operator/catch");
 var AppComponent = AppComponent_1 = (function () {
     function AppComponent(http) {
         this.http = http;
         this.model = 10;
+        this.sequences = [];
     }
     AppComponent.prototype.ngAfterViewChecked = function () {
         if (this.limit && this.limit.control) {
@@ -26,10 +28,11 @@ var AppComponent = AppComponent_1 = (function () {
         }
     };
     AppComponent.prototype.onSubmit = function () {
-        var rx = this.http.get("http://localhost:24461/api/sequence/getall?limit=" + this.model)
-            .map(function (response) { return response.json(); });
-        var data = rx.subscribe();
-        console.log(data);
+        var _this = this;
+        var url = "http://localhost:24461/api/sequence/getall?limit=" + this.model;
+        this.http.get(url)
+            .map(function (response) { return response.json(); })
+            .subscribe(function (data) { return _this.sequences = data; }, function (err) { return console.log(err); });
     };
     return AppComponent;
 }());
@@ -39,6 +42,9 @@ AppComponent.positiveIntValidator = function (control) {
     }
     else if (!Number.isInteger(control.value)) {
         return { nonInteger: true };
+    }
+    else if (control.value > 1000) {
+        return { tooLarge: true };
     }
     else {
         return null;
