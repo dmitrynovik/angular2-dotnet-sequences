@@ -1,26 +1,37 @@
 # angular2-dotnet-sequences
 
-## HOWTO Build and Run
+## Intro
 
-This is the .NET Web API  and Angular2 application built with Visual Studio 2017.
+This is the **.NET Web API**  and **Angular2** application built with Visual Studio 2017.
+
+The Angular2 app resides in `NumericSequences.Web/app` folder.
+
+## HOWTO Build and Run
 
 ### Prerequisites
 
-Visual Studio 2017
+Visual Studio 2017 or 2015
 
 Node.js
 
 ### Instructions
 
-0. git clone
+* git clone https://github.com/dmitrynovik/angular2-dotnet-sequences.git
 
-1. Open command prompt in the solution folder
+* cd angular-dotnet-sequences/NumericSequences.Web
 
-1.1 npm install
+* npm install
 
-1.2 npm run
+* npm run
 
-2. Open solution in Visual Studio 2017, build and run
+* Open solution in Visual Studio
+
+* Set startup project to NumericSequences.Web
+
+* build and start debug which launches Web API 
+
+* browse http://localhost:24461/index.html
+
 
 ## Numeric Sequence Calculator
 Goal As a USER
