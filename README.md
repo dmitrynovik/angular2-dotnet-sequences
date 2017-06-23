@@ -22,12 +22,14 @@ Node.js
 1.2 build and start debug which launches Web API 
 
 
+
 2. cd angular-dotnet-sequences/NumericSequences.Web
 
 2.1 npm install
 
 2.2 npm run
 
+2.3 browse http://localhost:3000/
 
 
 ## Numeric Sequence Calculator
