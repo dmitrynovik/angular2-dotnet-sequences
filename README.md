@@ -10,7 +10,7 @@ The Angular2 app resides in `NumericSequences.Web/app` folder.
 
 ### Prerequisites
 
-Visual Studio 2017
+Visual Studio 2017 or 2015
 
 Node.js
 
