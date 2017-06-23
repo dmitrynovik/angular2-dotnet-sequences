@@ -14,7 +14,7 @@ Node.js
 
 0. git clone
 
-1. Open command prompt in the solution folder
+1. cd angular-dotnet-sequences/NumericSequences.Web
 
 1.1 npm install
 
