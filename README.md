@@ -14,20 +14,17 @@ Node.js
 
 * git clone https://github.com/dmitrynovik/angular2-dotnet-sequences.git
 
+* cd angular-dotnet-sequences/NumericSequences.Web
+
+* npm install
+
+* npm run
 
 * Open solution in Visual Studio 2017
 
 * Set startup project to NumericSequences.Web
 
 * build and start debug which launches Web API 
-
-
-
-* cd angular-dotnet-sequences/NumericSequences.Web
-
-* npm install
-
-* npm run
 
 * browse http://localhost:24461/index.html
 
