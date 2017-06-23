@@ -6,8 +6,11 @@ This is the .NET Web API  and Angular2 application built with Visual Studio 2017
 Prerequisites: Visual Studio 2017, Node.js
 
 1. Open command prompt in solution folder
+
 1.1 npm install
+
 1.2 npm run
+
 2. Open solution in Visual Studio 2017, build and run
 
 ## Numeric Sequence Calculator
