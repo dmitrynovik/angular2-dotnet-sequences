@@ -29,7 +29,7 @@ Node.js
 
 * npm run
 
-* browse http://localhost:3000/
+* browse http://localhost:24461/index.html
 
 
 ## Numeric Sequence Calculator
