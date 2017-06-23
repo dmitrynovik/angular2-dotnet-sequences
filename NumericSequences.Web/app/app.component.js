@@ -32,7 +32,7 @@ var AppComponent = AppComponent_1 = (function () {
         var url = "http://localhost:24461/api/sequence/getall?limit=" + this.model;
         this.http.get(url)
             .map(function (response) { return response.json(); })
-            .subscribe(function (data) { return _this.sequences = data; }, function (err) { return console.log(err); });
+            .subscribe(function (data) { return _this.sequences = data.map(function (x) { return ({ name: x.Name, values: x.Values }); }); }, function (err) { return console.log(err); });
     };
     return AppComponent;
 }());

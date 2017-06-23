@@ -22,13 +22,6 @@
             <input type="submit" class="btn btn-primary" (click)="onSubmit()" />
         </div>
     </form>
-    <div *ngFor="let seq of sequences" class="sequence">
-        <div class="row">
-            <div class="col-xs-12 strong">{{seq.Name}}</div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12">{{seq.Values}}</div>
-        </div>
-        <br />
-    </div>
+    <sequence *ngFor="let seq of sequences" [sequence]="seq">
+    </sequence>
 </div>

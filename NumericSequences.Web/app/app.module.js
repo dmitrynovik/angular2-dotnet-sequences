@@ -11,6 +11,7 @@ var platform_browser_1 = require("@angular/platform-browser");
 var http_1 = require("@angular/http");
 var app_component_1 = require("./app.component");
 var forms_1 = require("@angular/forms");
+var sequence_component_1 = require("./sequence.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -19,7 +20,7 @@ var AppModule = (function () {
 AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule, forms_1.ReactiveFormsModule, forms_1.FormsModule, http_1.HttpModule],
-        declarations: [app_component_1.AppComponent],
+        declarations: [app_component_1.AppComponent, sequence_component_1.SequenceComponent],
         providers: [{ provide: common_1.APP_BASE_HREF, useValue: '/' }],
         bootstrap: [app_component_1.AppComponent]
     })

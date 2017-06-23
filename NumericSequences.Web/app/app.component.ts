@@ -4,6 +4,7 @@ import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import { Sequence } from './sequence';
 
 @Component({
     selector:"user-app",
@@ -15,7 +16,8 @@ export class AppComponent implements AfterViewChecked {
     constructor(private http: Http) {  }
 
     private model = 10;
-    private sequences:any = [];
+    private sequences: Sequence[] = [];
+
     @ViewChild('limit') limit: NgModel;
 
     static positiveIntValidator = (control: AbstractControl): { [key: string]: any } => {
@@ -48,7 +50,7 @@ export class AppComponent implements AfterViewChecked {
         this.http.get(url)
             .map((response: Response) => response.json())
             .subscribe(
-                data => this.sequences = data,
+                data => this.sequences = data.map((x: any) => ({ name: x.Name, values: x.Values })),
                 err => console.log(err)
             );
     }
