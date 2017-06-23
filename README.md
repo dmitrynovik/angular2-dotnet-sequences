@@ -1,11 +1,18 @@
 # angular2-dotnet-sequences
 
-## HOWTO Build
+## HOWTO Build and Run
 
 This is the .NET Web API  and Angular2 application built with Visual Studio 2017.
+
 ### Prerequisites
 
-Visual Studio 2017, Node.js
+Visual Studio 2017
+
+Node.js
+
+### Instructions
+
+0. git clone
 
 1. Open command prompt in the solution folder
 
