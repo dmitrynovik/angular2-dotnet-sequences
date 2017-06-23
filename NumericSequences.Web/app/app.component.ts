@@ -1,19 +1,33 @@
-﻿import { Component } from "@angular/core";
-import { FormsModule } from '@angular/forms';
+﻿import { Component, AfterViewChecked, ViewChild } from "@angular/core";
+import { AbstractControl, NgModel } from '@angular/forms';
 
 @Component({
     selector:"user-app",
     templateUrl: "./app/app.component.html"
 })
 
-export class AppComponent {
-    private _model: number = 10;
+export class AppComponent implements AfterViewChecked {
 
-    get model(): number {
-        return this._model;
+    private formErrors = {};
+
+    private model = 10;
+    @ViewChild('limit') limit: NgModel;
+
+    static positiveIntValidator = (control: AbstractControl): { [key: string]: any } => {
+        if (Number(control.value) <= 0) {
+            return { nonPositive: true };
+        }
+        else if (!Number.isInteger(control.value)) {
+            return { nonInteger: true };
+        }
+        else {
+            return null;
+        }
     }
 
-    set model(value: number) {
-        this._model = value;
-    }
+    ngAfterViewChecked() {
+        if (this.limit) {
+            this.limit.control.setValidators(AppComponent.positiveIntValidator);
+        }
+    }    
 }
