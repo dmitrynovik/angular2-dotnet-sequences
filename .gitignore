@@ -35,6 +35,10 @@ bld/
 *.VisualState.xml
 TestResult.xml
 
+# .ts - compilation
+*.map
+/app/*.js
+
 # Build Results of an ATL Project
 [Dd]ebugPS/
 [Rr]eleasePS/
