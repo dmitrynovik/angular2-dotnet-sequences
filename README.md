@@ -20,7 +20,7 @@ Node.js
 
 * npm run
 
-* Open solution in Visual Studio 2017
+* Open solution in Visual Studio
 
 * Set startup project to NumericSequences.Web
 
