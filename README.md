@@ -5,7 +5,7 @@ Goal As a USER
 I want to calculate some numeric sequences
 so that [TBD].
 
-Acceptance Criteria 
+## Acceptance Criteria 
 
 1. The software shall be web­based.
 
@@ -20,13 +20,15 @@ software.
 
 6. The repository URL shall be supplied to World Nomads Group
 
-## User Stories
+### User Stories
+
+#### S1 Instructions
 
 I want to read some instructions on how to use the application so that it works first time for me.
 
 Acceptance Criteria S1.1 The instructions shall be short and to the point.
 
-S2 Enter Data
+#### S2 Enter Data
 
 I want to enter a number and initiate the calculation of the numeric sequences so that I can view the results.
 
@@ -34,7 +36,7 @@ Acceptance Criteria S2.1 Input shall accept positive, whole numbers only.
 
 S2.2 Where an input is invalid an error message shall be displayed.
 
-S3 Acceptance Criteria 
+#### S3 Results
 
 I want to view the results of the numeric sequences so that [TBD].
 
