@@ -1,5 +1,8 @@
 ﻿import { Component, AfterViewChecked, ViewChild } from "@angular/core";
 import { AbstractControl, NgModel } from '@angular/forms';
+import { Http, Response } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
 
 @Component({
     selector:"user-app",
@@ -8,7 +11,7 @@ import { AbstractControl, NgModel } from '@angular/forms';
 
 export class AppComponent implements AfterViewChecked {
 
-    private formErrors = {};
+    constructor(private http: Http) {  }
 
     private model = 10;
     @ViewChild('limit') limit: NgModel;
@@ -26,8 +29,18 @@ export class AppComponent implements AfterViewChecked {
     }
 
     ngAfterViewChecked() {
-        if (this.limit) {
+        if (this.limit && this.limit.control) {
             this.limit.control.setValidators(AppComponent.positiveIntValidator);
+        } else {
+            console.error("Could not bind limit");
         }
-    }    
+    }
+
+    onSubmit() {
+        const rx = this.http.get("http://localhost:24461/api/sequence/getall?limit=" + this.model)
+            .map((response: Response) => response.json());
+
+        const data = rx.subscribe();
+        console.log(data);
+    }
 }

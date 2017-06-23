@@ -1,5 +1,5 @@
 ﻿<div>
-    <form #form="ngForm" (ngSubmit)="onSubmit()">
+    <form>
         <div class="row">
             <div class="col-md-12">
                 <h1>Numeric sequences generator.</h1>
@@ -19,7 +19,7 @@
         </div>
         <br />
         <div class="form-group">
-            <input type="submit" class="btn btn-primary" />
+            <input type="submit" class="btn btn-primary" (click)="onSubmit()" />
         </div>
     </form>
 </div>

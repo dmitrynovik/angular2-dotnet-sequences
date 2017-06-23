@@ -10,15 +10,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
+var http_1 = require("@angular/http");
+require("rxjs/add/operator/map");
 var AppComponent = AppComponent_1 = (function () {
-    function AppComponent() {
-        this.formErrors = {};
+    function AppComponent(http) {
+        this.http = http;
         this.model = 10;
     }
     AppComponent.prototype.ngAfterViewChecked = function () {
-        if (this.limit) {
+        if (this.limit && this.limit.control) {
             this.limit.control.setValidators(AppComponent_1.positiveIntValidator);
         }
+        else {
+            console.error("Could not bind limit");
+        }
+    };
+    AppComponent.prototype.onSubmit = function () {
+        var rx = this.http.get("http://localhost:24461/api/sequence/getall?limit=" + this.model)
+            .map(function (response) { return response.json(); });
+        var data = rx.subscribe();
+        console.log(data);
     };
     return AppComponent;
 }());
@@ -41,7 +52,8 @@ AppComponent = AppComponent_1 = __decorate([
     core_1.Component({
         selector: "user-app",
         templateUrl: "./app/app.component.html"
-    })
+    }),
+    __metadata("design:paramtypes", [http_1.Http])
 ], AppComponent);
 exports.AppComponent = AppComponent;
 var AppComponent_1;
