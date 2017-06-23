@@ -7,7 +7,7 @@ import 'rxjs/add/operator/catch';
 import { Sequence } from './sequence';
 
 @Component({
-    selector:"user-app",
+    selector:"app",
     templateUrl: "./app/app.component.html"
 })
 

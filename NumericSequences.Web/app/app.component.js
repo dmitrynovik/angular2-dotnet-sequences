@@ -56,7 +56,7 @@ __decorate([
 ], AppComponent.prototype, "limit", void 0);
 AppComponent = AppComponent_1 = __decorate([
     core_1.Component({
-        selector: "user-app",
+        selector: "app",
         templateUrl: "./app/app.component.html"
     }),
     __metadata("design:paramtypes", [http_1.Http])
