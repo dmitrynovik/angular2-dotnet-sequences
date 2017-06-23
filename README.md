@@ -10,19 +10,23 @@ Acceptance Criteria 1. The software shall be web­based.
 software.
 
 3. An end to end UI test shall be written for the software.
+
 4. The source shall be saved to a github repository.
-5. Any instructions required to run the software shall be included in a
-README.md file in the root of the repository.
+
+5. Any instructions required to run the software shall be included in a README.md file in the root of the repository.
+
 6. The repository URL shall be supplied to World Nomads Group
 
 ## User Stories
 
-I want to read some instructions on how to use the application
-so that it works first time for me.
+I want to read some instructions on how to use the application so that it works first time for me.
 
 Acceptance Criteria S1.1 The instructions shall be short and to the point.
+
 S2 Enter Data
+
 Story ID S2 Enter Data
+
 Story As a USER
 
 I want to enter a number and initiate the calculation of the numeric sequences so that I can view the results.
