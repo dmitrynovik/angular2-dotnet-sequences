@@ -5,7 +5,7 @@
 This is the .NET Web API  and Angular2 application built with Visual Studio 2017.
 Prerequisites: Visual Studio 2017, Node.js
 
-1. Open command prompt in solution folder
+1. Open command prompt in the solution folder
 
 1.1 npm install
 
