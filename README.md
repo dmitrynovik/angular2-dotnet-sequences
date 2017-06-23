@@ -12,7 +12,7 @@ Node.js
 
 ### Instructions
 
-0. git clone
+0. git clone https://github.com/dmitrynovik/angular2-dotnet-sequences.git
 
 1. cd angular-dotnet-sequences/NumericSequences.Web
 
