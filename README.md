@@ -25,24 +25,29 @@ S2 Enter Data
 Story ID S2 Enter Data
 Story As a USER
 
-I want to enter a number and initiate the calculation of the numeric
-sequences
-so that I can view the results.
+I want to enter a number and initiate the calculation of the numeric sequences so that I can view the results.
+
 Acceptance Criteria S2.1 Input shall accept positive, whole numbers only.
 
 S2.2 Where an input is invalid an error message shall be displayed.
 
-I want to view the results of the numeric sequences
-so that [TBD].
+I want to view the results of the numeric sequences so that [TBD].
 
 Acceptance Criteria S3.1 The following numeric sequences shall be displayed:
+
 S3.1.1 All numbers up to and including the number entered,
+
 S3.1.2 All odd numbers up to and including the number entered,
+
 S3.1.3 All even numbers up to and including the number entered,
-S3.1.4 All numbers up to and including the number entered, except
-when,
+
+S3.1.4 All numbers up to and including the number entered, except when,
+
 S3.1.4.1 A number is a multiple of 3 output C, and when,
+
 S3.1.4.2 A number is a multiple of 5 output E, and when,
+
 S3.1.4.3 A number is a multiple of both 3 and 5 output Z,
+
 S3.1.5 All fibonacci number up to and including the number entered.
 
