@@ -1,9 +1,12 @@
 # angular2-dotnet-sequences
 
-## HOWTO Build and Run
+## Intro
 
 This is the **.NET Web API**  and **Angular2** application built with Visual Studio 2017.
+
 The Angular2 app resides in NumericSequences.Web/app folder.
+
+## HOWTO Build and Run
 
 ### Prerequisites
 
