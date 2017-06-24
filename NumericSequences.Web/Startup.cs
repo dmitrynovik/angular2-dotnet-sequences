@@ -20,6 +20,9 @@ namespace NumericSequences.Web
             app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
 
             var config = new HttpConfiguration();
+
+            config.EnableCors();
+
             config.MapHttpAttributeRoutes();
             config.Routes.MapHttpRoute(name: "DefaultApi", routeTemplate: "api/{controller}/{id}", defaults: new { id = RouteParameter.Optional });
 

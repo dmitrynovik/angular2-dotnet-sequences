@@ -1,8 +1,10 @@
 ﻿using System.Linq;
 using System.Net.Http;
+using System.Web.Http.Cors;
 
 namespace NumericSequences.Web.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class SequenceController : BaseApiController
     {
         private static readonly SequenceFactory Factory = new SequenceFactory(); 
