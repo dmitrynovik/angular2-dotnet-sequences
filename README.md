@@ -28,9 +28,9 @@ Node.js
 
 * Set startup project to NumericSequences.Web
 
-* build and start debug which launches Web API 
+* build solution and start debug which launches the Web API 
 
-* browse http://localhost:24461/index.html
+* browse http://localhost:3000/
 
 
 ## Numeric Sequence Calculator
