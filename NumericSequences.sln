@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumericSequences", "Numeric
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumericSequences.UnitTest", "NumericSequences.UnitTest\NumericSequences.UnitTest.csproj", "{5C3EE8CC-3481-4E42-A573-2620311BDFF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumericSequences.Web", "NumericSequences.Web\NumericSequences.Web.csproj", "{563813E3-CBE1-4D6A-B6E0-E6868DA7D8B9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumericSequences.WebApi", "NumericSequences.WebApi\NumericSequences.WebApi.csproj", "{563813E3-CBE1-4D6A-B6E0-E6868DA7D8B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
