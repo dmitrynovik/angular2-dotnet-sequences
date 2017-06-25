@@ -2,9 +2,9 @@
 
 ## Intro
 
-This is the **.NET Web API**  and **Angular2** application built with Visual Studio 2017.
+This is the **.NET Web API** (.NET)  and **Angular2** application. 
 
-The Angular2 app resides in `NumericSequences.Web/app` folder.
+The Angular2 app resides in `ng-app` folder. It consumes the Web API, requires Node.js to build, and it does not rely on  Visual Studio.
 
 ## HOWTO Build and Run
 
@@ -12,26 +12,37 @@ The Angular2 app resides in `NumericSequences.Web/app` folder.
 
 Visual Studio 2017 or 2015
 
-Node.js
+Node.js (6.9.4)
 
 ### Instructions
 
+#### Build and Run
+
 * git clone https://github.com/dmitrynovik/angular2-dotnet-sequences.git
 
-* cd angular-dotnet-sequences/NumericSequences.Web
+* cd angular-dotnet-sequences/
 
-* npm install
-
-* npm run
-
-* Open solution in Visual Studio
+* Open the .sln solution in Visual Studio
 
 * Set startup project to NumericSequences.Web
 
-* build solution and start debug which launches the Web API 
+* build the Visual Studio solution and start debug which launches the Web API 
+
+* cd ng-app/
+
+* npm install
+
+* npm start
 
 * browse http://localhost:3000/
 
+#### End to End Test
+
+* Install `protractor` if you haven't done it before as described at http://www.protractortest.org/#/
+
+* cd ng-app/
+
+* npm run-script e2e
 
 ## Numeric Sequence Calculator
 Goal As a USER
