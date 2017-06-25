@@ -14,7 +14,9 @@ namespace NumericSequences
 
         public int Limit { get; }
 
-        public string Name => GetType().Name.AddSpacesAfterCapitals();
+        public string Name => GetType().Name;
+
+        public string Description => GetType().Name.AddSpacesAfterCapitals();
 
         public virtual IEnumerable<int> Enumerate() => Enumerable.Range(1, Limit);
 

@@ -50,7 +50,7 @@ export class AppComponent implements AfterViewChecked {
         this.http.get(url)
             .map((response: Response) => response.json())
             .subscribe(
-                data => this.sequences = data.map((x: any) => ({ name: x.Name, values: x.Values })),
+                data => this.sequences = data.map((x: any) => ({ name: x.Name, description: x.Description, values: x.Values })),
                 err => console.log(err)
             );
     }

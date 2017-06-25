@@ -15,13 +15,13 @@ namespace NumericSequences.Web.Controllers
         public HttpResponseMessage Get(string name, int limit)
         {
             var sequence = Factory.Create<int>(name, limit);
-            return Json(new { sequence.Name, Values = sequence.Print()});
+            return Json(new { sequence.Name, sequence.Description, Values = sequence.Print()});
         }
 
         public HttpResponseMessage GetAll(int limit)
         {
             var sequences = Factory.CreateAll(limit);               
-            return Json(sequences.Select(x => new { x.Name, Values = x.Print() }));
+            return Json(sequences.Select(x => new { x.Name, x.Description, Values = x.Print() }));
         }
     }
 }

@@ -2,14 +2,11 @@
 
 describe("Web numeric sequences E2E tests", () => {
 
-    const sequences: any[] = [];
-
-    function checkSequence(name: string, values: string) {
-        console.log("seqs:", sequences.length);
-        const seq = sequences.filter(x => (x.name === name))[0];
-
-        it(name + " must be not undefined", () => expect(seq).not.toBeUndefined());
-        it(name + " must equal " + values, () => expect(seq.values).toEqual(values));
+    function checkSequence(id: string, values: string) {
+        it("checking " + id, () => {
+            const vals = element(by.id(id)).element(by.css(".sequence-values")).getText();
+            expect(vals).toEqual(values);
+        });
     }
 
     beforeAll(() => {
@@ -17,22 +14,10 @@ describe("Web numeric sequences E2E tests", () => {
         console.log("Navigating to the root web page");
         browser.get("");
 
-        const apiWaitTimeout = 2000;
         console.log("Calling Web API to fill sequences");
+        const apiWaitTimeout = 5000;
         element(by.id("submit")).click();
         browser.sleep(apiWaitTimeout);
-
-        console.log("Found sequences:");
-        element.all(by.tagName("sequence")).then(seqs =>
-            seqs.forEach(seq => {
-                    seq.element(by.css(".sequence-name")).getText().then(name => {
-                        seq.element(by.css(".sequence-values")).getText().then(values => {
-                            console.log("\t", name, values);
-                            sequences.push({ name: name, values: values });
-                        });
-                    });
-                }
-            ));
     });
 
     const title = "Numeric sequences generator.";
@@ -50,6 +35,9 @@ describe("Web numeric sequences E2E tests", () => {
         expect(element(by.tagName("label")).getText()).toEqual(label);
     });
 
-    checkSequence("Fibonacci Numbers", "1,1,2,3,5,8");
-
+    checkSequence("FibonacciNumbers", "1,1,2,3,5,8");
+    checkSequence("EvenPositiveNaturalNumbers", "2,4,6,8,10");
+    checkSequence("OddPositiveNaturalNumbers", "1,3,5,7,9");
+    checkSequence("PositiveNaturalNumbers", "1,2,3,4,5,6,7,8,9,10");
+    checkSequence("WeirdNaturalNumbers", "1,2,C,4,E,C,7,8,C,E");
 });
