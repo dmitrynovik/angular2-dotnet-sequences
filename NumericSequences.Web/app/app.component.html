@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-12">
                 <h1>Numeric sequences generator.</h1>
-                <p>Generates some fancy numeric sequences</p>
+                <p class="help">Generates some fancy numeric sequences</p>
             </div>
         </div>
         <br />
@@ -19,7 +19,7 @@
         </div>
         <br />
         <div class="form-group">
-            <input type="submit" class="btn btn-primary" (click)="onSubmit()" />
+            <button id="submit" type="submit" class="btn btn-primary" (click)="onSubmit()" >Submit</button>
         </div>
     </form>
     <sequence *ngFor="let seq of sequences" [sequence]="seq">
