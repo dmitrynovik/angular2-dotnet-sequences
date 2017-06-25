@@ -17,27 +17,32 @@ export class AppComponent implements AfterViewChecked {
 
     private model = 10;
     private sequences: Sequence[] = [];
+    private invalid: boolean;
 
     @ViewChild('limit') limit: NgModel;
 
-    static positiveIntValidator = (control: AbstractControl): { [key: string]: any } => {
+    positiveIntValidator = (control: AbstractControl): { [key: string]: any } => {
         if (Number(control.value) <= 0) {
+            this.invalid = true;
             return { nonPositive: true };
         }
         else if (!Number.isInteger(control.value)) {
+            this.invalid = true;
             return { nonInteger: true };
         }
         else if (control.value > 1000) {
+            this.invalid = true;
             return { tooLarge: true };
         }
         else {
+            this.invalid = false;
             return null;
         }
     }
 
     ngAfterViewChecked() {
         if (this.limit && this.limit.control) {
-            this.limit.control.setValidators(AppComponent.positiveIntValidator);
+            this.limit.control.setValidators(this.positiveIntValidator);
         } else {
             console.error("Could not bind limit");
         }

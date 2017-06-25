@@ -19,7 +19,7 @@
         </div>
         <br />
         <div class="form-group">
-            <button id="submit" type="submit" class="btn btn-primary" (click)="onSubmit()" >Submit</button>
+            <button id="submit" type="submit" class="btn btn-primary" (click)="onSubmit()" [disabled]="invalid" >Submit</button>
         </div>
     </form>
     <sequence *ngFor="let seq of sequences" [sequence]="seq">
