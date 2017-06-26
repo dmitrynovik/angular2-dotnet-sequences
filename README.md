@@ -24,7 +24,7 @@ Node.js (6.9.4)
 
 * Open the .sln solution in Visual Studio
 
-* Set startup project to NumericSequences.Web
+* Set startup project to NumericSequences.WebApi
 
 * build the Visual Studio solution and start debug which launches the Web API 
 
